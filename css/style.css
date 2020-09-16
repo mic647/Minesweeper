@@ -41,16 +41,17 @@ body {
     width: 300px;
     display: block;
 }
-.undo, .redo{
+
+.un-re-do {
     display: inline;
     width: 150px;
 }
 
-.hint, .manually, .render, .safe-click, .undo {
+.hint, .manually, .render, .safe-click, .un-re-do {
     cursor: pointer;
 }
 
-.hint:hover, .manually:hover, .render:hover, .safe-click:hover, .undo:hover, .redo:hover {
+.hint:hover, .manually:hover, .render:hover, .safe-click:hover, .un-re-do:hover {
     cursor: pointer;
     box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.75);
     background-color: lightblue;
@@ -111,8 +112,9 @@ body {
     height: 400px;
     border-spacing: 0px;
     margin-left: auto;
+    margin-top: 35px;
     margin-right: auto;
-    box-shadow: 1px 1px 23px 9px rgba(0,0,0,0.45);
+    box-shadow: 1px 1px 23px 9px rgba(0, 0, 0, 0.45);
 }
 
 .cell {
@@ -125,8 +127,8 @@ body {
     font-size: 13px;
 }
 
-.cell:hover{
-    box-shadow: 1px 1px 8px 6px rgba(0,0,0,0.29);
+.cell:hover {
+    box-shadow: 1px 1px 8px 6px rgba(0, 0, 0, 0.29);
 }
 
 .game {
@@ -202,7 +204,6 @@ button {
 .safe-click{
     margin-bottom: 10px ;
 } */
-
 
 .time {
     margin-right: 0px;
