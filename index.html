@@ -9,34 +9,44 @@
 </head>
 
 <body onload="initGame()">
-    <div class="game">
-        <div class="btn-game">
-            <div class="modal-level">Minesweeper<br>LEVEL <span></span></div>
-            <div class="modal"> GAME OVER </div>
-            <div class="btn-level">
-                <button onclick="sizeGame(this)" class="size-game"> 4 </button>
-                <button onclick="sizeGame(this)" class="size-game"> 8 </button>
-                <button onclick="sizeGame(this)" class="size-game"> 12 </button>
+    <div class="contaner">
+        <div class="game">
+            <div class="btn-game">
+                <div class="modal-level">Minesweeper<br>LEVEL <span></span></div>
+                <div class="modal"> GAME OVER </div>
+                <div class="btn-level">
+                    <button onclick="sizeGame(this)" onmouseover="playSound('mouse')" class="size-game"> 4 <span></span>
+                    </button>
+                    <button onclick="sizeGame(this)" onmouseover="playSound('mouse')" class="size-game"> 8
+                        <span></span></button>
+                    <button onclick="sizeGame(this)" onmouseover="playSound('mouse')" class="size-game"> 12
+                        <span></span></button>
+                </div>
+                <div class="btn">
+                    <button class="btn-st undo" onclick="undoStep()"><span>&#8617;</span></button>
+                    <button class="btn-st redo" onclick="redoStep()"><span>&#8618;</span></button>
+                    <button class="btn-st life">Life: <span></span></button>
+                    <button class="btn-st hint" onclick="showHint()">Get Hint: <span></span></button>
+                    <button class="btn-st safe-click" onclick="SafeClick(gBoard)">Safe Click <span>(3
+                            Left)</span></button>
+                    <button class="btn-st manually" onclick="manuallyMines()">Manually Create <span> (2
+                            Left)</span></button>
+                    <button class="btn-st manually" onclick="renderBoard(gBoard)">render board<span></span></button>
+                </div>
             </div>
-            <button class="btn-st life">Life: <span></span></button>
-            <button class="btn-st hint" onclick="showHint()">Get Hint: <span></span></button>
-            <button class="btn-st safe-click" onclick="SafeClick(gBoard)">Safe Click <span>(3 Left)</span></button>
-            <button class="btn-st manually" onclick="manuallyMines()">Manually Create <span> (2 Left)</span></button>
-            <button class="btn-st manually" onclick="renderBoard(gBoard)">render board<span></span></button>
         </div>
-    </div>
-    </div>
-    <div class="game-board">
-        <div class="btn-on"> <span></span>
-            <div class="btn-on-1">Marked:<br><span></span></div>
-            <div class="btn-on-2" onclick="startGame()">on/of<br><span>🥺</span></div>
-            <div class="btn-on-3">Time<br><span></span></div>
-            <div class="btn-on-4">Best Score<br><span></span></div>
+        <div class="game-board">
+            <div class="btn-on"> <span></span>
+                <div class="btn-on-1">Marked:<br><span></span></div>
+                <div class="btn-on-2" onclick="startGame()">on/of<br><span>🥺</span></div>
+                <div class="btn-on-3">Time<br><span></span></div>
+                <div class="btn-on-4">Best Score<br><span></span></div>
+            </div>
+            <table class="board">
+            </table>
         </div>
-        <table class="board">
-        </table>
+        <div class="footer">All rights reserved © </div>
     </div>
-    <div class="footer">All rights reserved © </div>
     <script src="js/main.js"></script>
 </body>
 
