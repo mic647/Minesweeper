@@ -1,0 +1,245 @@
+.title {
+    text-align: center;
+    background-color: blue;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    text-align: center;
+    background-color: gray;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    /* position: relative; */
+    max-width: 960px;
+    margin: auto;
+    border: 3px solid #160e29;
+    background-color: rgb(141, 182, 236);
+}
+
+.levels {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: rgb(174, 202, 238);
+    border: black solid;
+    width: 100px;
+    height: 110px;
+    margin-top: 80px;
+    margin-right: 20px;
+}
+
+.level {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 70px;
+}
+
+table {
+    table-layout: fixed;
+    flex: 2;
+    left: 50%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border: 3px solid rgb(5, 48, 77);
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid grey;
+    width: 30px;
+}
+
+img {
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+
+.control {
+    position: absolute;
+    flex: 1 100%;
+    width: 30%;
+    background-color: rgb(197, 192, 192);
+    height: 30px;
+    margin-bottom: 3px;
+    margin-top: 10px;
+    border: black solid;
+    color: red;
+    font-weight: bold;
+}
+
+.help {
+    display: inline-block;
+    align-self: flex-start;
+    align-items: center;
+    background-color: rgb(205, 174, 235);
+    border: black solid;
+    width: 90px;
+    height: 195px;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.hints {
+    display: inline-block;
+    border-bottom: black solid;
+    width: 90px;
+    padding-bottom: 1px;
+}
+
+.hint {
+    display: block;
+    position: relative;
+}
+
+.hintButton {
+    margin: 3px;
+    margin-left: 25px;
+    background-color: rgb(235, 229, 229);
+}
+
+.lifes {
+    display: inline-block;
+    width: 90px;
+    border-bottom: black solid;
+    padding-bottom: 1px;
+}
+
+#life {
+    margin: 3px;
+    margin-left: 10px;
+}
+
+.safe {
+    display: inline-block;
+    width: 90px;
+    border-bottom: black solid;
+    padding-bottom: 1px;
+}
+
+.safeButton {
+    margin: 3px;
+    margin-left: 5px;
+    background-color: rgb(235, 229, 229);
+}
+
+.special {
+    margin-left: 4px
+}
+
+.undo {
+    display: block;
+    width: 90px;
+}
+
+.undoButton {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 4px;
+    background-color: rgb(235, 229, 229);
+}
+
+.beginner {
+    background-color: rgb(184, 238, 113);
+}
+
+.medium {
+    background-color: rgb(226, 180, 52);
+}
+
+.expert {
+    background-color: rgb(226, 119, 119);
+}
+
+.manual {
+    background-color: rgb(197, 101, 216);
+}
+
+.timer {
+    position: absolute;
+    font-size: 20px;
+    right: 5px;
+    top: 3px;
+}
+
+.count {
+    position: absolute;
+    font-size: 20px;
+    left: 5px;
+    top: 3px;
+}
+
+.reset {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 1px;
+}
+
+.cell {
+    background-color: #BBB9B9;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hidden {
+    background-color: #D5D4D4;
+}
+
+.hinted {
+    background-color: #1ae7d6;
+}
+
+.minesmanual {
+    background-color: rgb(212, 154, 27)
+}
+
+.cell-1 {
+    color: rgb(26, 109, 218);
+}
+
+.cell-2 {
+    color: rgb(14, 143, 14);
+}
+
+.cell-3 {
+    color: red;
+}
+
+.cell-4 {
+    color: purple;
+}
+
+.cell-5 {
+    color: maroon;
+}
+
+.cell-6 {
+    color: turquoise;
+}
+
+.cell-7 {
+    color: black;
+}
+
+.cell-8 {
+    color: gray;
+}

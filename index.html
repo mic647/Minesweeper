@@ -1,51 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
+    <title>Mines Sweeper</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Minesweeper</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body onload="initGame()">
-    <div class="game">
-        <div class="btn-game">
-            <div class="modal-level">Minesweeper<br>LEVEL <span></span></div>
-            <div class="modal"> GAME OVER </div>
-            <div class="btn-level">
-                <button onclick="sizeGame(this)" onmouseover="playSound('mouse')" class="size-game"> 4 <span></span>
-                </button>
-                <button onclick="sizeGame(this)" onmouseover="playSound('mouse')" class="size-game"> 8
-                    <span></span></button>
-                <button onclick="sizeGame(this)" onmouseover="playSound('mouse')" class="size-game"> 12
-                    <span></span></button>
+<body onload="init()">
+    <h1 class="title">Mine Sweeper</h1>
+
+    <div class="flex-container ">
+        <div class="levels">
+            <button class="level beginner" onclick="setLevel(this)">Beginner</button>
+            <button class="level medium" onclick="setLevel(this)">Medium</button>
+            <button class="level expert" onclick="setLevel(this)">Expert</button>
+            <button class="level manual" onclick="setManualMines()">Manual</button>
+        </div>
+        <div class="control">
+            <span class="count">00</span>
+            <button class="reset" onclick="resetGame(this)">😎</button>
+            <span class="timer">000</span>
+
+        </div>
+        <div>
+            <table>
+                <tbody class="board" oncontextmenu="return false">
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="help">
+            <div class="hints">
+                <div class="hinticons">
+                    <span class="special hint0">💡</span>
+                    <span class="special hint1">💡</span>
+                    <span class="special  hint2">💡</span>
+                </div>
+                <button class="hintButton" onclick="showHint(this)">Hint</button>
+
             </div>
-            <div class="btn">
-                <button class="btn-st un-re-do" onclick="redoStep()"><span>&#8617;</span></button>
-                <button class="btn-st un-re-do" type="button" onclick="undoStep()" ><span>&#8618;</span></button>
-                <button class="btn-st life">Life: <span></span></button>
-                <button class="btn-st hint" onclick="showHint()">Get Hint: <span></span></button>
-                <button class="btn-st safe-click" onclick="SafeClick(gBoard)">Safe Click <span>(3
-                        Left)</span></button>
-                <button class="btn-st manually" onclick="manuallyMines()">Manually Create <span> (2
-                        Left)</span></button>
-                <button class="btn-st manually" onclick="renderBoard(gBoard)">render board<span></span></button>
-            </div>
+            <div class="lifes">
+                <div class="lifeicons">
+                    <span class="special life life0 ">💚</span>
+                    <span class="special life1 ">💚</span>
+                    <span class="special life2 ">💚</span>
+                </div>
+                <input type="checkbox" id="life" name="life" value="off" onchange="useLife()" "> Lifes
+    
+        </div>
+        <div class="safe ">
+            <div class="icons ">
+            <span class="special safe0 ">🧞‍♂️</span>
+            <span class="special safe1 ">🧞‍♂️</span>
+            <span class="special safe2 ">🧞‍♂️</span>
+       </div>
+            <button class="safeButton " onclick="safeMove(this) ">Safe move</button>
+          
+        </div>
+        <div class="undo ">
+            <button class="undoButton " onclick="undoMove(this) " disabled="true ">UNDO</button>
         </div>
     </div>
-    <div class="game-board">
-        <div class="btn-on"> <span></span>
-            <div class="btn-on-1">Marked:<br><span></span></div>
-            <div class="btn-on-2" onclick="startGame()">on/of<br><span>🥺</span></div>
-            <div class="btn-on-3">Time<br><span></span></div>
-            <div class="btn-on-4">Best Score<br><span></span></div>
-        </div>
-        <table class="board">
-        </table>
-    </div>
-    <div class="footer">All rights reserved © </div>
-    <script src="js/main.js"></script>
+</div>
+    <h4 class="footer ">Alex Guberman</h4>
+
+    <script src="js/utilities.js "></script>
+    <script src="js/board.js "></script>
+    <script src="js/game.js "></script>
+    <script src="js/control.js "></script>
+
 </body>
 
 </html>
