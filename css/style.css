@@ -56,7 +56,6 @@ body {
     box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.75);
     background-color: lightblue;
 }
-
 .modal-level {
     text-align: center;
     margin-top: 20px;
@@ -112,7 +111,6 @@ body {
     height: 400px;
     border-spacing: 0px;
     margin-left: auto;
-    margin-top: 35px;
     margin-right: auto;
     box-shadow: 1px 1px 23px 9px rgba(0, 0, 0, 0.45);
 }
@@ -125,6 +123,7 @@ body {
     text-align: center;
     cursor: pointer;
     font-size: 13px;
+    font-weight: bold;
 }
 
 .cell:hover {
